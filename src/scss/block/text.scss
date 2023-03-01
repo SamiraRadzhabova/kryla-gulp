@@ -1,0 +1,32 @@
+.text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: $dgrey;
+
+  &--menu {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &--sub {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+@media (max-width: 1279px) {
+  .text {
+    font-size: 14px;
+
+    &--menu {
+      font-size: 12px;
+    }
+  }
+}
+// @media (max-width: 767px) {
+//   .text {
+//     font-size: 14px;
+//   }
+// }
