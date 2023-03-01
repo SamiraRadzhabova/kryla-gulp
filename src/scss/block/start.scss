@@ -11,22 +11,50 @@
   &__info {
     max-width: 530px;
     width: 100%;
-  }
 
-  &__title {
-    margin-top: 10px;
-  }
+    & h1 {
+      font-family: "Kyiv", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 43px;
+      color: $black;
 
-  &__text {
-    margin-top: 40px;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-family: "Kyiv", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 65px;
+      color: $black;
+    }
+
+    & p {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: $dgrey;
+
+      margin-top: 40px;
+    }
   }
 
   &__btn {
     margin-top: 30px;
+
+    &--mobile {
+      display: none;
+    }
   }
 
-  &__img {
-    max-height: 390px;
+  &__box {
+    max-width: 410px;
+    width: 100%;
 
     & img {
       object-fit: contain;
@@ -43,20 +71,74 @@
       gap: 0;
     }
 
-    &__title {
-      margin-top: 5px;
-    }
+    &__info {
+      & h1 {
+        font-size: 32px;
+        margin-top: 5px;
+      }
 
-    &__text {
-      margin-top: 30px;
+      & h2 {
+        font-size: 40px;
+      }
+
+      & p {
+        font-size: 14px;
+        margin-top: 30px;
+      }
     }
 
     &__btn {
       margin-top: 20px;
     }
 
+    &__box {
+      max-width: 375px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .start {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__info {
+      & h1 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      & h2 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      & p {
+        margin-top: 20px;
+      }
+    }
+
+    &__btn {
+      display: none;
+
+      &--mobile {
+        display: flex;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto 0;
+    }
+
     &__img {
-      max-height: 360px;
+      max-width: 345px;
     }
   }
 }

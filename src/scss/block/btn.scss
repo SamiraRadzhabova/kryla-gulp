@@ -19,8 +19,8 @@
   color: $blue;
 }
 
-// @media (max-width: 767px) {
-//   .btn {
-//     font-size: 14px;
-//   }
-// }
+@media (max-width: 767px) {
+  .btn {
+    max-width: 345px;
+  }
+}
