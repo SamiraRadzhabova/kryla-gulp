@@ -1,0 +1,44 @@
+.lang {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    position: relative;
+    padding: 7px 5px;
+    background-color: transparent;
+
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dgrey;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $grey;
+      transition: 0.3s ease;
+    }
+
+    &.active {
+      color: $blue;
+      transition: 0.3s ease;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &:first-of-type::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 30px;
+      background-color: $dgrey;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

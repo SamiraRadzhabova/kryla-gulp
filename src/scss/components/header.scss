@@ -1,0 +1,134 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &__wrapper {
+      gap: 20px;
+    }
+
+    &__btn {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__lang {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &.open {
+      height: 100vh;
+      padding-bottom: 30px;
+
+      & .header {
+        &__container {
+          height: 100%;
+          overflow-y: scroll;
+
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__wrapper {
+          position: relative;
+          padding-bottom: 20px;
+
+          &::after {
+            content: "";
+            display: block;
+            width: calc(100% + 30px);
+            height: 1px;
+            background-color: $grey;
+            margin-left: -15px;
+            flex-shrink: 0;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+
+        &__lang {
+          display: flex;
+        }
+
+        &__btn {
+          display: none;
+        }
+
+        &__body {
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+        }
+
+        &__nav {
+          margin-top: 20px;
+          margin-left: initial;
+
+          &--mobile {
+            display: block;
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .header {
+    &__btn {
+      font-size: 14px;
+    }
+  }
+}
+// @media (max-width: 767px) {
+//   .header {
+//   }
+// }

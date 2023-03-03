@@ -4,14 +4,186 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <title>БФ «Крила України Нікополь»</title>
   </head>
 
   <body>
     <header class="header">
-      <div class="container"></div>
+      <div class="container header__container">
+        <div class="header__wrapper">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+          <div class="lang header__lang">
+            <button class="lang__btn active">УКР</button>
+            <button class="lang__btn">ENG</button>
+          </div>
+
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__link submenu">
+                <div class="submenu__head">
+                  Про фонд
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__body">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="#">Команда</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Реквізити</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Публічна оферта</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Політика конфіденційності</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Контакти</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link submenu">
+                <div class="submenu__head">
+                  Напрямки допомоги
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__body">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="#">Напрямок підтримки дітей та молоді</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Розвиток та відновлення Нікопольщини</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Напрямок гуманітарної допомоги</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Програми освіти та працевлаштування</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Допомога військовим</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#"
+                        >Розвиток медицини, підтримка медичних закладів</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link">
+                <a href="#">Звернутись по допомогу</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Блог</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Звіти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="#" class="btn header__btn">Підтримати фонд</a>
+
+          <button class="burger">
+            <span class="burger__top"></span>
+            <span class="burger__middle"></span>
+            <span class="burger__bottom"></span>
+          </button>
+        </div>
+        <div class="header__body">
+          <nav class="nav header__nav header__nav--mobile">
+            <ul class="nav__list">
+              <li class="nav__link submenu">
+                <div class="submenu__head">
+                  Про фонд
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__body">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="#">Команда</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Реквізити</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Публічна оферта</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Політика конфіденційності</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Контакти</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link submenu">
+                <div class="submenu__head">
+                  Напрямки допомоги
+                  <svg width="15" height="15">
+                    <use xlink:href="img/sprite.svg#arrowDown"></use>
+                  </svg>
+                </div>
+                <div class="submenu__body">
+                  <ul class="submenu__list">
+                    <li class="submenu__item">
+                      <a href="#">Напрямок підтримки дітей та молоді</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Розвиток та відновлення Нікопольщини</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Напрямок гуманітарної допомоги</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Програми освіти та працевлаштування</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#">Допомога військовим</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#"
+                        >Розвиток медицини, підтримка медичних закладів</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav__link">
+                <a href="#">Блог</a>
+              </li>
+              <li class="nav__link">
+                <a href="#">Звіти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__buttons">
+            <button class="btn">Звернутись по допомогу</button>
+            <button class="btn btn--black">
+              Підтримати фонд
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#heart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main">
@@ -47,7 +219,7 @@
       <div class="container"></div>
     </footer>
 
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="libs/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
