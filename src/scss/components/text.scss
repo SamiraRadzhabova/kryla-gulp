@@ -16,6 +16,7 @@
     line-height: 130%;
   }
 }
+
 @media (max-width: 1279px) {
   .text {
     font-size: 14px;
@@ -23,10 +24,9 @@
     &--menu {
       font-size: 12px;
     }
+
+    &--sub {
+      font-size: 12px;
+    }
   }
 }
-// @media (max-width: 767px) {
-//   .text {
-//     font-size: 14px;
-//   }
-// }

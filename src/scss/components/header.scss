@@ -113,10 +113,18 @@
 
         &__buttons {
           display: flex;
-          flex-direction: column;
+          align-items: center;
           gap: 20px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .header {
+    &__buttons {
+      flex-direction: column;
     }
   }
 }
@@ -128,7 +136,3 @@
     }
   }
 }
-// @media (max-width: 767px) {
-//   .header {
-//   }
-// }

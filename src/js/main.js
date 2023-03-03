@@ -3,17 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // lang toggle
   const langBtn = document.querySelectorAll(".lang__btn");
-
-  if (langBtn?.length) {
-    langBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        langBtn.forEach((el) => {
-          el.classList.remove("active");
-        });
-        btn.classList.add("active");
-      });
-    });
-  }
+  setActiveClass(langBtn);
 
   // submenu in the header
   const submenu = document.querySelectorAll(".submenu");
@@ -53,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       burger.classList.toggle("open");
       rootElement.classList.toggle("block");
 
-      // let headerOpen = document.querySelector(".header.open");
+      // const headerOpen = document.querySelector(".header.open");
 
       // if (headerOpen) {
       //   let navItem = headerOpen.querySelectorAll('.header.open .nav__item');
@@ -67,23 +57,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
       //   });
       // };
     });
+  }
 
-    // Buttons hover animation
-    const buttons = document.querySelectorAll(".btn");
+  // buttons hover animation
+  const buttons = document.querySelectorAll(".btn");
 
-    if (buttons?.length) {
-      buttons.forEach((button) => {
-        ["mouseenter", "mouseout"].forEach((mouseEvent) => {
-          button.addEventListener(mouseEvent, (e) => {
-            let buttonPosition = button.getBoundingClientRect();
-            let mousePositionX = e.clientX - buttonPosition.left;
-            let mousePositionY = e.clientY - buttonPosition.top;
+  if (buttons?.length) {
+    buttons.forEach((button) => {
+      ["mouseenter", "mouseout"].forEach((mouseEvent) => {
+        button.addEventListener(mouseEvent, (e) => {
+          let buttonPosition = button.getBoundingClientRect();
+          let mousePositionX = e.clientX - buttonPosition.left;
+          let mousePositionY = e.clientY - buttonPosition.top;
 
-            const span = button.querySelector("span");
+          const span = button.querySelector("span");
 
-            span.style.top = `${mousePositionY}px`;
-            span.style.left = `${mousePositionX}px`;
+          span.style.top = `${mousePositionY}px`;
+          span.style.left = `${mousePositionX}px`;
+        });
+      });
+    });
+  }
+
+  // donat section
+  const banks = document.querySelectorAll(".donat__bank");
+  const sumButtons = document.querySelectorAll(".donat__sum");
+  setActiveClass(banks);
+  setActiveClass(sumButtons);
+
+  function setActiveClass(element) {
+    if (element?.length) {
+      element.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          element.forEach((el) => {
+            el.classList.remove("active");
           });
+
+          btn.classList.add("active");
         });
       });
     }

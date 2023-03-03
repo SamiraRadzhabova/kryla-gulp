@@ -1,0 +1,215 @@
+.donat {
+  &__wrapper {
+    padding: 40px 50px;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 69% 28%;
+    gap: 40px 3%;
+  }
+
+  &__banks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__bank {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black;
+    cursor: pointer;
+
+    opacity: 0.3;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    align-self: flex-end;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  &__sum {
+    width: 100%;
+    height: 50px;
+    background-color: $white;
+    border-radius: 20px;
+    border: 1px solid $blue;
+    transition: 0.3s ease;
+
+    font-weight: 700;
+    font-size: 16px;
+    color: $blue;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    & span {
+      font-weight: 400;
+    }
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    &.active {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &__btn {
+    max-width: 305px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .donat {
+    &__wrapper {
+      padding: 30px;
+      grid-template-columns: 67% 31%;
+      gap: 20px 2%;
+    }
+
+    &__list {
+      gap: 10px;
+    }
+
+    &__sum {
+      width: 100%;
+      height: 50px;
+      background-color: $white;
+      border-radius: 20px;
+      border: 1px solid $blue;
+      transition: 0.3s ease;
+
+      font-weight: 700;
+      color: $blue;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      & span {
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+        transition: 0.3s ease;
+      }
+    }
+
+    &__btn {
+      max-width: 305px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .donat {
+    &__wrapper {
+      padding: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+    }
+
+    &__banks {
+      width: 100%;
+    }
+
+    &__bank {
+      gap: 5px;
+      padding-bottom: 10px;
+    }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__list {
+      width: 100%;
+      gap: 10px 15px;
+    }
+
+    &__sum {
+      height: 40px;
+      background-color: $white;
+      border-radius: 15px;
+
+      font-weight: 700;
+      color: $blue;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      & span {
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+        transition: 0.3s ease;
+      }
+    }
+
+    &__btn {
+      max-width: 305px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .donat {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .donat {
+    &__list {
+      gap: 10px;
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+  }
+}
