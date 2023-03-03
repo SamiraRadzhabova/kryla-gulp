@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const header = document.querySelector(".header");
   const burger = document.querySelector(".burger");
 
-  if (burger) {
+  if (burger && header) {
     burger.addEventListener("click", () => {
       header.classList.toggle("open");
       burger.classList.toggle("open");
@@ -67,6 +67,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
       //   });
       // };
     });
+
+    // Buttons hover animation
+    const buttons = document.querySelectorAll(".btn");
+
+    if (buttons?.length) {
+      buttons.forEach((button) => {
+        ["mouseenter", "mouseout"].forEach((mouseEvent) => {
+          button.addEventListener(mouseEvent, (e) => {
+            let buttonPosition = button.getBoundingClientRect();
+            let mousePositionX = e.clientX - buttonPosition.left;
+            let mousePositionY = e.clientY - buttonPosition.top;
+
+            const span = button.querySelector("span");
+
+            span.style.top = `${mousePositionY}px`;
+            span.style.left = `${mousePositionX}px`;
+          });
+        });
+      });
+    }
   }
 
   console.log("DOM fully loaded and parsed");
