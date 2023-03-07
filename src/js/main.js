@@ -75,8 +75,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
           const span = button.querySelector("span");
 
-          span.style.top = `${mousePositionY}px`;
-          span.style.left = `${mousePositionX}px`;
+          if (span) {
+            span.style.top = `${mousePositionY}px`;
+            span.style.left = `${mousePositionX}px`;
+          }
         });
       });
     });

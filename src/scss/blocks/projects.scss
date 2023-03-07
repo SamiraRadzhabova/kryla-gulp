@@ -1,0 +1,26 @@
+.projects {
+  padding-top: 200px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__desc {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__grid {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
