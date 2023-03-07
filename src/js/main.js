@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // lang toggle
   const langBtn = document.querySelectorAll(".lang__btn");
-  setActiveClass(langBtn);
+
+  if (langBtn) {
+    setActiveClass(langBtn);
+  }
 
   // submenu in the header
   const submenu = document.querySelectorAll(".submenu");
@@ -82,21 +85,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // donat section
   const banks = document.querySelectorAll(".donat__bank");
   const sumButtons = document.querySelectorAll(".donat__sum");
-  setActiveClass(banks);
-  setActiveClass(sumButtons);
+
+  if (banks) {
+    setActiveClass(banks);
+  }
+
+  if (sumButtons) {
+    setActiveClass(sumButtons);
+  }
+
+  // accordion
+  const accordion = document.querySelectorAll(".accordion");
+  const accordionBody = document.querySelectorAll(".accordion__body");
+  const accordionContent = document.querySelectorAll(".accordion__content");
+
+  if (accordion) {
+    accordion.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        if (!item.classList.contains("active")) {
+          accordion.forEach((el, index) => {
+            el.classList.remove("active");
+            accordionBody[index].style.maxHeight = "0";
+          });
+          item.classList.add("active");
+
+          let height = accordionContent[i].offsetHeight;
+          accordionBody[i].style.maxHeight = `${height}px`;
+        } else {
+          item.classList.remove("active");
+          accordionBody[i].style.maxHeight = "0";
+        }
+      });
+    });
+  }
 
   function setActiveClass(element) {
-    if (element?.length) {
-      element.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          element.forEach((el) => {
-            el.classList.remove("active");
-          });
-
-          btn.classList.add("active");
+    element.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        element.forEach((el) => {
+          el.classList.remove("active");
         });
+
+        btn.classList.add("active");
       });
-    }
+    });
   }
 
   console.log("DOM fully loaded and parsed");

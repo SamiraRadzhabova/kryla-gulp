@@ -84,6 +84,140 @@ body {
   display: none !important;
 }
 
+.accordion {
+  padding: 25px 0;
+  cursor: pointer;
+}
+
+.accordion:hover .accordion__toggler {
+  border-color: #1b6df5;
+}
+
+.accordion:hover .accordion__toggler::before,
+.accordion:hover .accordion__toggler::after {
+  background-color: #1b6df5;
+}
+
+.accordion__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.accordion__toggler {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1d1d1d;
+  background-color: transparent;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.accordion__toggler::before,
+.accordion__toggler::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #1d1d1d;
+  border-radius: 99px;
+  position: absolute;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.accordion__toggler::before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.accordion__toggler::after {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  -ms-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion__toggler.active {
+  border-color: #1b6df5;
+}
+
+.accordion__toggler.active::before,
+.accordion__toggler.active::after {
+  background-color: #1b6df5;
+}
+
+.accordion__toggler.active::after {
+  width: 0px;
+}
+
+.accordion__body {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.accordion__content {
+  display: grid;
+  grid-template-columns: 66% 1fr;
+  gap: 20px;
+}
+
+.accordion__img {
+  position: relative;
+  height: 100%;
+  background-color: #dee0eb;
+  border-radius: 10px;
+}
+
+.accordion__img img {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.accordion__text {
+  margin-top: 25px;
+}
+
+.accordion__btn {
+  margin-top: 35px;
+}
+
+.accordion.active .accordion__body {
+  margin-top: 35px;
+}
+
+.accordion.active .accordion__toggler::after {
+  width: 0;
+}
+
 .btn {
   position: relative;
   z-index: 1;
@@ -676,7 +810,48 @@ body {
   max-width: 305px;
 }
 
+.kinds {
+  padding-top: 200px;
+}
+
+.kinds__title {
+  margin-bottom: 90px;
+}
+
+.kinds__item {
+  position: relative;
+}
+
+.kinds__item::after {
+  content: "";
+  max-width: 100%;
+  width: 100vw;
+  height: 1px;
+  background-color: #1d1d1d;
+  position: absolute;
+  left: 0;
+}
+
+.kinds__item::after {
+  bottom: 0;
+}
+
+.kinds__item:first-of-type::before {
+  content: "";
+  max-width: 100%;
+  width: 100vw;
+  height: 1px;
+  background-color: #1d1d1d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media (max-width: 1279px) {
+  .accordion__btn {
+    margin-top: 45px;
+  }
+
   .container {
     max-width: 1000px;
     padding: 0 20px;
@@ -815,6 +990,14 @@ body {
 
   .donat__btn {
     max-width: 305px;
+  }
+
+  .kinds {
+    padding-top: 150px;
+  }
+
+  .kinds__title {
+    margin-bottom: 70px;
   }
 }
 
@@ -1097,6 +1280,38 @@ body {
 }
 
 @media (max-width: 767px) {
+  .accordion {
+    padding: 20px 0;
+  }
+
+  .accordion__content {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion__img {
+    max-height: 400px;
+  }
+
+  .accordion__img img {
+    position: static;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin: auto;
+  }
+
+  .accordion__text {
+    margin-top: 5px;
+  }
+
+  .accordion__btn {
+    margin: 15px auto 0;
+  }
+
+  .accordion.active .accordion__body {
+    margin-top: 20px;
+  }
+
   .title {
     font-size: 22px;
     line-height: 30px;
@@ -1109,6 +1324,20 @@ body {
 
   .title--sub {
     font-size: 18px;
+    line-height: 130%;
+  }
+
+  .title--18 {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .kinds {
+    padding-top: 100px;
+  }
+
+  .kinds__title {
+    margin-bottom: 40px;
   }
 }
 
@@ -1122,6 +1351,12 @@ body {
 
   .donat__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .accordion__img {
+    max-height: 200px;
   }
 }
 
