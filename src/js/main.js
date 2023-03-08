@@ -133,5 +133,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Splide
+  var splide = new Splide(".splide", {
+    type: "loop",
+    autoWidth: true,
+    height: 250,
+    gap: 20,
+    focus: "center",
+    arrows: false,
+    pagination: false,
+    mediaQuery: "min",
+    breakpoints: {
+      1000: {
+        destroy: true,
+      },
+    },
+  });
+  splide.mount();
+
   console.log("DOM fully loaded and parsed");
 });
