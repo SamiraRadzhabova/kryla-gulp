@@ -24,3 +24,37 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 1279px) {
+  .projects {
+    padding-top: 150px;
+
+    &__grid {
+      margin-top: 70px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .projects {
+    padding-top: 100px;
+
+    &__desc {
+      margin-top: 10px;
+    }
+
+    &__btn {
+      display: none;
+
+      &--mobile {
+        display: flex;
+        margin: 30px auto 0;
+      }
+    }
+
+    &__grid {
+      margin-top: 50px;
+      grid-template-columns: 1fr;
+    }
+  }
+}

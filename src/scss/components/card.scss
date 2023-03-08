@@ -86,10 +86,6 @@
     overflow-y: hidden;
   }
 
-  &__link {
-    margin-top: 20px;
-  }
-
   &__progress {
     margin-top: auto;
   }
@@ -155,6 +151,66 @@
   &.yellow {
     & .card__image {
       background-color: $lyellow;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .card {
+    &__image {
+      height: 200px;
+    }
+
+    &__info {
+      & h3 {
+        font-size: 18px;
+        line-height: 150%;
+      }
+
+      & p {
+        font-size: 14px;
+      }
+
+      & a {
+        margin-top: 10px;
+      }
+    }
+
+    &__text {
+      margin-top: 10px;
+    }
+
+    &__amount {
+      & p {
+        font-size: 16px;
+      }
+    }
+
+    &__bar {
+      height: 2px;
+
+      & span {
+        & p {
+          font-size: 14px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .card {
+    &__image {
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .card {
+    &__image {
+      height: 200px;
     }
   }
 }
