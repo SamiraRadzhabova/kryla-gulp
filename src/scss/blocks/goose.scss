@@ -1,0 +1,133 @@
+.goose {
+  &__wrapper {
+    padding: 100px;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 80px;
+  }
+
+  &__info {
+    & h2 {
+      font-family: "Kyiv", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 43px;
+      color: $black;
+
+      max-width: 360px;
+      margin-bottom: 50px;
+    }
+
+    & p {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: $dgrey;
+
+      & + p {
+        margin-top: 15px;
+      }
+
+      & a {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+  &__block {
+    & h2 {
+      display: none;
+    }
+
+    & p {
+      font-family: "Kyiv", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      color: $black;
+    }
+  }
+
+  &__img {
+    margin-top: 35px;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .goose {
+    &__wrapper {
+      padding: 80px;
+      gap: 70px;
+    }
+
+    &__info {
+      & p {
+        font-size: 14px;
+      }
+    }
+
+    &__btn {
+      margin-top: 30px;
+    }
+
+    &__block {
+      & p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .goose {
+    &__wrapper {
+      padding: 30px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &__info {
+      order: 1;
+
+      & h2 {
+        display: none;
+      }
+    }
+
+    &__block {
+      & h2 {
+        font-family: "Kyiv", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: $black;
+
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__img {
+      margin: 35px auto 0;
+    }
+
+    &__btn {
+      margin: 30px auto 0;
+    }
+  }
+}
